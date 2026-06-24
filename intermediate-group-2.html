@@ -89,7 +89,66 @@ body{font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:0; padding
 
 /* 26-06-2018 */
 .captcha_outer {outline:none !important; pointer-evnts:none;}
-.captcha_btn {background: none; border:none; font-size:18px; font-weight:bold; color:#000075; pointer-evnts:none; padding: 0; margin: 0; outline:none !important;} @media (max-width: 768px) {.container {max-width:100%;width:100%; border-left:none; border-right:none; padding:0 0px;} body{overflow-x:hidden;} .header-right{width:100%;font-size: 20px;}.header {display: flex;}.result_form{width:100%;}.merit-list tr td{font-size: 12px;}.heading2 {font-size: 16px;padding-top: 15px;}
+.captcha_btn {background: none; border:none; font-size:18px; font-weight:bold; color:#000075; pointer-evnts:none; padding: 0; margin: 0; outline:none !important;}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+    padding: 10px 5px !important;
+  }
+  .header-left {
+    width: 50px !important;
+    float: none !important;
+  }
+  .header-left img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .header-right {
+    width: calc(100% - 60px) !important;
+    font-size: 15px !important;
+    padding: 0 !important;
+    float: none !important;
+    text-align: center !important;
+    margin-left: 10px !important;
+  }
+  .header-right span {
+    font-size: 11px !important;
+    margin-top: 3px;
+  }
+  .content {
+    padding: 10px 5px !important;
+  }
+  .heading2 {
+    font-size: 14px !important;
+    padding-top: 10px;
+    line-height: 1.4;
+  }
+  .heading2 a {
+    font-size: 10px !important;
+  }
+  .result-table {
+    width: 100% !important;
+    font-size: 12px !important;
+  }
+  .result-table td {
+    padding: 6px !important;
+  }
+  .result_form {
+    width: 100%;
+  }
 }</style>
 
 <script nonce="" language="javascript">
@@ -169,10 +228,10 @@ body{font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:0; padding
         const contentDiv = document.querySelector('.content');
         if (contentDiv) {
             contentDiv.innerHTML = `
-                <div style="text-align: right; padding-right: 15px; margin-bottom: 5px;">
-                    <a href="intermediate-group-2.html" style="color: blue; text-decoration: underline; font-family: Arial, sans-serif; font-size: 14px;">Logout</a>
+                <div class="heading2" style="font-family: Arial, sans-serif; font-weight: bold; margin-bottom: 20px; text-align: center; position: relative;">
+                    Intermediate (New) Examination Results, May 2026
+                    <a href="intermediate-group-2.html" style="color: #0000ee; text-decoration: underline; font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; margin-left: 10px; display: inline-block; vertical-align: middle;">logout</a>
                 </div>
-                <div class="heading2" style="font-family: Arial, sans-serif; font-weight: bold; margin-bottom: 20px;">Intermediate (New) Examination Results, May 2026</div>
                 
                 <table width="100%" border="0" class="result-table" style="margin: 20px auto; max-width: 750px; font-family: Arial, Helvetica, sans-serif; border-collapse: collapse;">
                   <tr style="background-color: #93008E; color: white;">
@@ -218,7 +277,11 @@ body{font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:0; padding
                   paper(s).
                 </div>
                 
-                <p align="center" style="margin-top: 20px;"><a href="index.html" style="color: #93008E; font-weight: bold; text-decoration: none; font-family: Arial, sans-serif;">Home</a></p>
+                <div style="font-size: 12px; text-align: center; margin-top: 20px; font-family: Arial, sans-serif; margin-bottom: 25px;">
+                  <a href="intermediate-group-2.html" style="color: #0000ee; text-decoration: underline;">Check Another Roll Number</a> | 
+                  <a href="intermediate-group-2.html" style="color: #0000ee; text-decoration: underline;">Check Merit Login</a> | 
+                  <a href="index.html" style="color: #0000ee; text-decoration: underline;">Home</a>
+                </div>
             `;
         }
     }
